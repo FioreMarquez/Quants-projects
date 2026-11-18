@@ -3,7 +3,7 @@ import sys
 import time
 import numpy as np
 
-# Agregar src/ al path para que funcionen los imports internos entre modulos
+
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(ROOT_DIR, "src")
 if SRC_DIR not in sys.path:
@@ -16,7 +16,7 @@ from timestepping import solve_american_option_pde
 
 
 def run_all_experiments():
-    # Parametros base del caso de prueba (Tabla 1 del informe)
+    # Parametros base del caso de prueba (Tabla 1 del doc)
     K = 100.0
     r = 0.10
     sigma = 0.20
@@ -104,7 +104,7 @@ def run_all_experiments():
                 f"{diff:12.6f} | {ratio_str:>7} | {err_bin:11.6f} | {elapsed:6.2f}"
             )
 
-    print("\n--- Filas listas para copiar en Tabla 2 de LaTeX ---")
+    print("\n- Filas listas para copiar en Tabla 2 de LaTeX -")
     for idx, (m, steps, avg_iters, price, _, _) in enumerate(conv_results):
         if idx == 0:
             print(f"${m}$ & ${steps}$ & ${avg_iters:.2f}$ & ${price:.6f}$ & --- & --- \\\\")
@@ -112,7 +112,7 @@ def run_all_experiments():
             diff = abs(conv_results[idx - 1][3] - price)
             print(
                 f"${m}$ & ${steps}$ & ${avg_iters:.2f}$ & ${price:.6f}$ & "
-                f"${diff:.6f}$ & --- \\\\"
+                f"${diff:.6f}$ &  \\\\"
             )
         else:
             diff = abs(conv_results[idx - 1][3] - price)
