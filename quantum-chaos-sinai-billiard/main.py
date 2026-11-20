@@ -88,7 +88,7 @@ def main() -> None:
     d3_sinai, d3_pois, d3_goe = spectral_rigidity_delta3(unf_sinai.unfolded_levels, L_vals)
 
     # 5. Resumen numérico para el Abstract y Sección 5 del informe
-    print("\n--- RESULTADOS FINALES ---")
+    print("\n-RESULTADOS FINALES ")
     print(f"Nodos activos Sinai: {mesh_sinai.n_active} | Gershgorin B: [{cota_inf_B:.2f}, {cota_sup_B:.2f}]")
     print(f"Niveles Sinai: {len(eigs_sinai)} | Varianza P(s): {stats_sinai['variance']:.3f} (GOE: {stats_goe['variance']:.3f})")
     print(f"Niveles Rectángulo: {len(eigs_rect)} | Varianza P(s): {stats_rect['variance']:.3f} (Poisson: 1.000)")
