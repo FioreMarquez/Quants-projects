@@ -202,7 +202,7 @@ def iteracion_qr_hessenberg(
             cs = np.zeros(m, dtype=np.float64)
             sn = np.zeros(m, dtype=np.float64)
 
-            # Paso QR: anular subdiagonal mediante rotaciones de Givens por izquierda
+            # Paso QR: 
             for i in range(m):
                 r = float(np.hypot(H[i, i], H[i + 1, i]))
                 if r == 0.0:
@@ -241,7 +241,7 @@ def iteracion_qr_hessenberg(
 
 def autovalores_qr_denso(A: np.ndarray, tol: float = 1e-12) -> np.ndarray:
     """
-    Calcula el espectro completo de una matriz real simétrica (o con espectro real):
+    Calcula el espectro completo de una matriz real simétrica:
     1) Reducción a forma tridiagonal/Hessenberg por reflexiones de Householder.
     2) Iteraciones QR con desplazamiento de Wilkinson y rotaciones de Givens.
     """
