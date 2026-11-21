@@ -13,9 +13,9 @@ Implementación numérica en Python para la valuación de opciones *put* america
 
 ```text
 black-scholes/
-├── main.py                # Script principal de experimentos y tablas de convergencia
-├── requirements.txt       # Dependencias del entorno
-├── README.md              # Documentación del proyecto
+├── main.py                # Script principal de experimentos y tablas de convergencia ( se corre solo esto)
+├── requirements.txt       # Dependencias del entorno (esto no va) 
+├── README.md              # Documentación del proyecto (falta redactar mejor esto)
 └── src/
     ├── fem.py             # Generación de malla, ensamblaje FEM P1, M-matriz y griegas
     ├── penalty.py         # Solver de Newton generalizado para el paso penalizado
